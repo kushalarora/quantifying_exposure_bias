@@ -232,12 +232,12 @@ def quantify_exposure_bias_pretrained(output_dir: str,
     oracle = NaturalLanguageOracle(oracle_model, 
                         cuda_device=cuda_device)
 
-    exposure_bias_target = ExposureBiasV2(oracle, 
+    exposure_bias_target = ExposureBias(oracle, 
                         max_generated_len=generation_size,
                         temperature=exp_temperature, 
                         context_length=context_len)
 
-    exposure_bias = ExposureBiasV2(oracle, 
+    exposure_bias = ExposureBias(oracle, 
                         max_generated_len=generation_size,
                         temperature=exp_temperature, 
                         context_length=context_len)
